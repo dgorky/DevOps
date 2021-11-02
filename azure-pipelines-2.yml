@@ -28,11 +28,11 @@ stages:
     - bash: echo $(environment)Deploy
 - stage: QADeploy
   variables:
-    environment: Dev 
+    environment: QA 
   jobs:
   - job: QADeployJob
     steps:
-    - bash: echo $(environment)QADeploy
+    - bash: echo $(environment)DeployJob
 - stage: ProdDeploy
   jobs:
   - job: ProdDeployJob
