@@ -1,21 +1,118 @@
-######## 1 #########
-Windows machine
-Visual Studio Code
-Git Bash / Git extension
-Repo folder
+# Windows machine
+- Visual Studio Code
+- Git Bash / Git extension
+- Repo folder
 
-######## 2 #########
-Azure
-Azure Subscription
-Resource Group
-Storage Account
-App Registration
-Enterprise Application
+# Azure
+- Azure Subscription
+- Resource Group
+- Storage Account
+- App Registration
+- Enterprise Application
 
-######## 3 #########
-Azure DevOps
-Organization
-Project
-Service Connection
+# Azure DevOps
+- Organization
+- Project
+- Service Connection
 
 ##### STEPS #####
+- Install Visual Studio Code
+- Install Git Bash / Git Extension
+- Make a Repository folder
+- Go to Azure Portal
+- Make a Resource Group
+- Create a resource
+- Create machine: Windows Server 2019 Datacenter
+- Fill in the data - Select inbound ports HTTP / HTTPS / RDP - devuser / P@ssw0rd001!
+- Review + create
+- Download a template for automation
+- Make local repository folder on Windows machine
+- Copy template + parameter files to repository folder
+- Go to Azure Portal
+- Go to Azure Active Directory
+- Go to App registrations
+- Create New registration
+- Give a name (DevServiceConnection) - Select platform (Web) - https://DevServiceConnection
+- Go to Azure Active Directory
+- Go to Enterprise applications
+- Select created application regitrations (DevServiceConnection)
+- Copy Application ID
+- Start Cloud Shell
+- Click on "Show advanced settings"
+- Fill in the data - Resource Group (DEV-RG) - Storage account (01devstorage) - File share (01devfileshare)
+- Create storage
+- Enter following command: az ad sp credential reset --id 03a91495-67ab-45e2-9932-ff8bcae9c0c7
+- Copy text to notepad
+
+{
+  "appId": "03a91495-67ab-45e2-9932-ff8bcae9c0c7",
+  "password": "nyU8Q~H8xo_LCcoxM3JjRL4pbgvO6zWyCYM97aAx",
+  "tenant": "0cf65a6b-8343-4618-bde1-5487072f5b18"
+}
+
+- Go to DevOps Portal
+- Go to Repos - Files
+- Click on Initialize
+- Click on the 3 dots
+- Create New Folder
+- Give a foldername (dev) + filename (dev)
+- Put some random text
+- Commit
+- On the (dev) folder: click on the 3 dots
+- Upload file(s)
+- Browse to template + parameter files
+- Commit
+- OPTIONAL: delete file (dev)
+- Go to Pipelines
+- Create Pipeline
+- Use the classic editor
+- Selec Azure Repos Git
+- Click on Continue
+- Click on Empty job
+- Click on Agent job 1
+- Click on + icon
+- Add ARM template deployment
+- Click on ARM Template deployment: Resource Group scope
+- Browse to template file
+- Browese to parameter file
+- Click on Manage (Azure Resource Manager connection)
+- Create service connection
+- 
+
+
+- Make project in DevOps portal
+- Under Repo; make a folder and upload the template files
+- Make Pipeline - new empty job
+- Make Create service connection / ARM
+- Go to Azure AD - App registration
+- Make new registration
+- Go to Azure AD - Enterprise Application
+- Application ID - 37b0f52a-6a73-49b1-a4bc-32595d73ffe9
+- Command: az ad sp credential reset --id 37b0f52a-6a73-49b1-a4bc-32595d73ffe9
+- Open Cloud Shell
+- Click on "Show advanced settings"
+- Fill in 
+- Make Storage account
+
+### ID ###
+
+{
+  "appId": "37b0f52a-6a73-49b1-a4bc-32595d73ffe9",
+  "password": "Snc8Q~JR4uFYGzlOZW7V-dlVMrh_nvnkH7AmNbf.",
+  "tenant": "0cf65a6b-8343-4618-bde1-5487072f5b18"
+}
+
+- Go to VS code - Terminal - Bash - git config --global credential.helper wincred
+- git config --global user.name "username"
+- git config --global user.email ""emailaddress""
+- Go to Subscription
+- Access control (IAM)
+- Add role - Owner - Member - Assign
+- Fill in Service Connection data
+- Go to Repo - Clone - Copy URL
+- Open VS Code - Ctrl+Shift P - Git clone - Paste URL
+- Enter credentials
+- Open folder - parameter
+- Change null password to - password
+- In VS code - Source Control 
+- Enter message and Commit and Sync
