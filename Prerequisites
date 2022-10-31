@@ -77,42 +77,58 @@
 - Browese to parameter file
 - Click on Manage (Azure Resource Manager connection)
 - Create service connection
-- 
-
-
-- Make project in DevOps portal
-- Under Repo; make a folder and upload the template files
-- Make Pipeline - new empty job
-- Make Create service connection / ARM
-- Go to Azure AD - App registration
-- Make new registration
-- Go to Azure AD - Enterprise Application
-- Application ID - 37b0f52a-6a73-49b1-a4bc-32595d73ffe9
-- Command: az ad sp credential reset --id 37b0f52a-6a73-49b1-a4bc-32595d73ffe9
-- Open Cloud Shell
-- Click on "Show advanced settings"
-- Fill in 
-- Make Storage account
-
-### ID ###
-
-{
-  "appId": "37b0f52a-6a73-49b1-a4bc-32595d73ffe9",
-  "password": "Snc8Q~JR4uFYGzlOZW7V-dlVMrh_nvnkH7AmNbf.",
-  "tenant": "0cf65a6b-8343-4618-bde1-5487072f5b18"
-}
-
-- Go to VS code - Terminal - Bash - git config --global credential.helper wincred
-- git config --global user.name "username"
-- git config --global user.email ""emailaddress""
-- Go to Subscription
+- Select Azure Resource Manager
+- Next
+- Select Service principal (manual)
+- Next
+- Go to Azure Portal
+- Go to Subscriptions
+- Select Subscription
 - Access control (IAM)
-- Add role - Owner - Member - Assign
-- Fill in Service Connection data
-- Go to Repo - Clone - Copy URL
-- Open VS Code - Ctrl+Shift P - Git clone - Paste URL
-- Enter credentials
-- Open folder - parameter
-- Change null password to - password
-- In VS code - Source Control 
-- Enter message and Commit and Sync
+- Click Add (Add role assignment)
+- Select Owner
+- Select Member (DevServiceConnection)
+- Review + assign
+- Go to Subscription (Overview)
+- Copy Subscription ID (Azure Portal)
+- Paste Subscription ID (DevOps Portal)
+- Copy Subscription Name (Azure Portal)
+- Paste Subscription Name (DevOps Portal)
+- Copy appId from Notepad (03a91495-67ab-45e2-9932-ff8bcae9c0c7)
+- Paste Service Principal ID (DevOps Portal)
+- Copy password from Notepad (nyU8Q~H8xo_LCcoxM3JjRL4pbgvO6zWyCYM97aAx)
+- Paste Service principal key (DevOps Portal)
+- Copy tenant from Notepad (0cf65a6b-8343-4618-bde1-5487072f5b18)
+- Paste Tenant ID (DevOps Portal)
+- Click on Verify
+- Give Service connection name (DevServiceConnection)
+- Go back to Pipeline browser tab
+- Azure Resource Manager connection (DevServiceConnection)
+- Subscription (Betalen naar gebruik)
+- Action (Create or update resource group)
+- Resource group (DEV-RG)
+- Location (East US)
+- Go to Triggers
+- Enable continuous integration
+- Save 
+- Start Visual Studio Code
+- Open Terminal (Git Bash)
+- Enter following command: git config --global credential.helper wincred
+- Enter following command: git config --global user.name "devuser"
+- Enter following command: git config --global user.email s.gorky@outlook.com
+- Go to DevOps Portal
+- Go to Repos
+- Click on Clone - Copy URL (https://sgorky@dev.azure.com/sgorky/sgorky/_git/sgorky)
+- Go to Visual Studio Code
+- Ctrl + Shift + P - Git: Clone - Paste URL (https://sgorky@dev.azure.com/sgorky/sgorky/_git/sgorky)
+- Browse to repo folder (template + parameter files)
+- Select account
+- Enter Credentials
+- Click on Open
+- Open repo folder in Visual Studio Code (dev)
+- Click on parameters.json file
+- Change null password: "P@ssw0rd001!"
+- Ctrl + S to save file
+- Go to Source Control to commit
+- Write a Message
+- Commit
