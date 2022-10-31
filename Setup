@@ -1,0 +1,38 @@
+- Make RG
+- Make server / template
+- Download template
+- Make new local folder for repo 
+- Make project in DevOps portal
+- Under Repo; make a folder and upload the template files
+- Make Pipeline - new empty job
+- Make Create service connection / ARM
+- Go to Azure AD - App registration
+- Make new registration
+- Go to Azure AD - Enterprise Application
+- Application ID - 37b0f52a-6a73-49b1-a4bc-32595d73ffe9
+- Command: az ad sp credential reset --id 37b0f52a-6a73-49b1-a4bc-32595d73ffe9
+- Open Cloud Shell
+- Make Storage account
+
+### ID ###
+
+{
+  "appId": "37b0f52a-6a73-49b1-a4bc-32595d73ffe9",
+  "password": "Snc8Q~JR4uFYGzlOZW7V-dlVMrh_nvnkH7AmNbf.",
+  "tenant": "0cf65a6b-8343-4618-bde1-5487072f5b18"
+}
+
+- Go to VS code - Terminal - Bash - git config --global credential.helper wincred
+- git config --global user.name "username"
+- git config --global user.email ""emailaddress""
+- Go to Subscription
+- Access control (IAM)
+- Add role - Owner - Member - Assign
+- Fill in Service Connection data
+- Go to Repo - Clone - Copy URL
+- Open VS Code - Ctrl+Shift P - Git clone - Paste URL
+- Enter credentials
+- Open folder - parameter
+- Change null password to - password
+- In VS code - Source Control 
+- Enter message and Commit and Sync
