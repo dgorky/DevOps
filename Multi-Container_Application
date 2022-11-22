@@ -28,7 +28,7 @@ Navigate to "xxsqldatabase" // Overview // Set server firewall // Selected Netwo
 Navigate to "xxcontainer" // Access Control (IAM)
 Add // Add role assignment // Select Owner // Add Member "xxaks"
 
-Navigate to All Resources // "xxsqldatabase" // Overview // Connection strings: Show database connection strings
+Navigate to All Resources // "xxsqldatabase" // Connection strings //
 Copy string
 
 ### DEVOPS ###
