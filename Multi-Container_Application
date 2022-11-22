@@ -1,1 +1,25 @@
+### AZURE PORTAL ###
+Navigate to Azure Active Directory // App Registrations // New Registration
+xxaks // web // https://xxaks
 
+Navigate to Subscriptions // Select Subscription // Access Control (IAM)
+Add // Add role assignment // Select Owner // Add Member "xxaks"
+
+Navigate to Azure Active Directory // Enterprise applications // Select "xxaks" // Copy Application ID 
+Start Cloud Shell // Enter command: az ad sp credential reset --id <Application ID>
+Copy output to Notepad
+
+### DEVOPS ###
+Project Settings // Service Connections // Create Service Connection
+Select Azure Resource Manager // Next // Service principal (manual) // Next
+Enter output from Notepad // "xxaksServiceConnection" // Verify and save
+
+{
+  "appId": "d57c3b8c-2dbe-4008-a55a-3a77c6a75290",
+  "password": "5FF8Q~eB-mOvQ.RDqkffA2txy6imAbP17x2hmani",
+  "tenant": "0cf65a6b-8343-4618-bde1-5487072f5b18"
+}
+
+### AZURE PORTAL ###
+Search Kubernetes Services
+Create a Kubernetes cluster
