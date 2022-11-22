@@ -56,6 +56,11 @@ SQLserver = xxakssqlserver.database.windows.net
 SQLuser = sqladmin
 Save
 
+Navigate to Pipelines // All // Select "MyHealth.AKS.build-YAML" // Edit
+Change "azureSubscription" = xxServiceConnection
+Change "azureContainerRegistry" = xxcontainer.azurecr.io
+Save
+
 Navigate to Releases // Edit // Select Dev "2 jobs, 3 tasks"
 Navigate to Variables // Replace //
 ACR = xxcontainer.azurecr.io
