@@ -16,7 +16,7 @@ Enter output from Notepad // "xxaksServiceConnection" // Verify and save
 
 {
   "appId": "d57c3b8c-2dbe-4008-a55a-3a77c6a75290",
-  "password": "5FF8Q~eB-mOvQ.RDqkffA2txy6imAbP17x2hmani",
+  "password": "qHN8Q~.Xu1tfJ1jW-YEdeuDsh5d4sSEma.lribk-",
   "tenant": "0cf65a6b-8343-4618-bde1-5487072f5b18"
 }
 
@@ -40,16 +40,16 @@ Scroll down to "Containers" // Insert container name: __ACR__/myhealth.web:lates
 Navigate to Pipelines // All // Select "MyHealth.AKS.build" pipeline // Edit
 Navigate to Tasks: "Run- Build- Push- Lock- services" // Select Service Connection "xxaksServiceConnection" + Container Registry
 Navigate to Variables // Replace //
-ACR = 
-SQLpassword = 
-SQLserver =  
-SQLuser = 
+ACR = xxcontainer.azurecr.io
+SQLpassword = P@SSw0rd01!!
+SQLserver = xxakssqlserver
+SQLuser = sqladmin
 Save
 
 Navigate to Releases // Edit // Select Dev "2 jobs, 3 tasks"
 Navigate to Variables // Replace //
-ACR = 
-SQLpassword = 
-SQLserver =  
-SQLuser = 
+ACR = xxcontainer.azurecr.io
+SQLpassword = P@SSw0rd01!!
+SQLserver = xxakssqlserver.database.windows.net
+SQLuser = sqladmin
 Save
