@@ -34,4 +34,6 @@ Navigate to Repos // Files // "mhc-aks.yaml" // Edit
 Scroll down to "Containers" // Insert container name: __ACR__/myhealth.web:latest -->> xxcontainer.azurecr.io/myhealth.web:latest // Commit
 
 Navigate to Pipelines // All // Select "MyHealth.AKS.build" pipeline // Edit
-Go through the jobs: "Run- Build- Push- Lock- services" // Select Service Connection + Container Registry
+Navigate to Tasks: "Run- Build- Push- Lock- services" // Select Service Connection "xxaksServiceConnection" + Container Registry
+Navigate to Variables // Replace "ACR - SQLpassword - SQLserver - SQLuser" // Save
+Navigate to Releases // Edit // Select Dev "2 jobs, 3 tasks"
