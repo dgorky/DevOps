@@ -24,6 +24,8 @@ Enter output from Notepad // "xxaksServiceConnection" // Verify and save
 Search: Kubernetes services // Create a Kubernetes cluster
 Search: SQL databases // Create // Create new SQL server // Select: Use SQL authentication // Create
 Search: Container Registries // Create
+Navigate to "xxsqldatabase" // Overview // Set server firewall // Selected Networks // Select "Allow Azure services and resources to acces this server" // Save
+
 Navigate to All Resources // "xxsqldatabase" // Overview // Connection strings: Show database connection strings
 Copy string
 
@@ -35,5 +37,17 @@ Scroll down to "Containers" // Insert container name: __ACR__/myhealth.web:lates
 
 Navigate to Pipelines // All // Select "MyHealth.AKS.build" pipeline // Edit
 Navigate to Tasks: "Run- Build- Push- Lock- services" // Select Service Connection "xxaksServiceConnection" + Container Registry
-Navigate to Variables // Replace "ACR - SQLpassword - SQLserver - SQLuser" // Save
+Navigate to Variables // Replace //
+ACR = 
+SQLpassword = 
+SQLserver =  
+SQLuser = 
+Save
+
 Navigate to Releases // Edit // Select Dev "2 jobs, 3 tasks"
+Navigate to Variables // Replace //
+ACR = 
+SQLpassword = 
+SQLserver =  
+SQLuser = 
+Save
