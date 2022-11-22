@@ -42,7 +42,7 @@ Navigate to Tasks: "Run- Build- Push- Lock- services" // Select Service Connecti
 Navigate to Variables // Replace //
 ACR = xxcontainer.azurecr.io
 SQLpassword = P@SSw0rd01!!
-SQLserver = xxakssqlserver
+SQLserver = xxakssqlserver.database.windows.net
 SQLuser = sqladmin
 Save
 
