@@ -21,5 +21,17 @@ Enter output from Notepad // "xxaksServiceConnection" // Verify and save
 }
 
 ### AZURE PORTAL ###
-Search Kubernetes Services
-Create a Kubernetes cluster
+Search: Kubernetes services // Create a Kubernetes cluster
+Search: SQL databases // Create // Create new SQL server // Select: Use SQL authentication // Create
+Search: Container Registries // Create
+Navigate to All Resources // "xxsqldatabase" // Overview // Connection strings: Show database connection strings
+Copy string
+
+### DEVOPS ###
+Navigate to Repos // Files // "src" // "MyHealth.Web" // "appsettings.json" // Edit
+Replace copied string // change password // Commit
+Navigate to Repos // Files // "mhc-aks.yaml" // Edit
+Scroll down to "Containers" // Insert container name: __ACR__/myhealth.web:latest -->> xxcontainer.azurecr.io/myhealth.web:latest // Commit
+
+Navigate to Pipelines // All // Select "MyHealth.AKS.build" pipeline // Edit
+Go through the jobs: "Run- Build- Push- Lock- services" // Select Service Connection + Container Registry
