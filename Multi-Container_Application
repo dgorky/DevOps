@@ -25,6 +25,8 @@ Search: Kubernetes services // Create a Kubernetes cluster
 Search: SQL databases // Create // Create new SQL server // Select: Use SQL authentication // Create
 Search: Container Registries // Create
 Navigate to "xxsqldatabase" // Overview // Set server firewall // Selected Networks // Select "Allow Azure services and resources to acces this server" // Save
+Navigate to "xxcontainer" // Access Control (IAM)
+Add // Add role assignment // Select Owner // Add Member "xxaks"
 
 Navigate to All Resources // "xxsqldatabase" // Overview // Connection strings: Show database connection strings
 Copy string
