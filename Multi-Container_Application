@@ -1,3 +1,13 @@
+###PREREQUISITES ###
+- Azure Subscription
+- Azure Kubernetes Service - Demo Generator: https://azuredevopsdemogenerator.azurewebsites.net/
+- Kubernetes extension
+- Replace Tokens extension
+- AKS (Azure Kubernetes Services)
+- ACR (Azure Container Registery)
+- Azure SQL Database / Server
+- Service Connection 
+
 ### AZURE PORTAL ###
 Navigate to Azure Active Directory // App Registrations // New Registration
 xxaks // web // https://xxaks
