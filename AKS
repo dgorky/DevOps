@@ -1,0 +1,5 @@
+Required files:
+appsettings.json
+mhc-aks.yaml
+docker-compose.ci.build.yml
+docker-compose.yml
